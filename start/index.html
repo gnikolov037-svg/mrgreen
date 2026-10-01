@@ -1212,6 +1212,17 @@
 </script>
 <!-- Austrian alpine resort editorial landing · Kartra no-upload source -->
 <style>
+/* The visible final CTA is the only layer that can receive a touch. */
+#hc-wheel #second-popup.popup{pointer-events:none!important;z-index:2147483000!important}
+#hc-wheel #second-popup.popup.active-popup{pointer-events:auto!important}
+#hc-wheel #second-popup .popup-body{position:relative!important;z-index:2!important;pointer-events:none!important}
+#hc-wheel #second-popup.active-popup .popup-btn{position:relative!important;z-index:4!important;display:flex!important;align-items:center!important;justify-content:center!important;pointer-events:auto!important;touch-action:manipulation!important;-webkit-tap-highlight-color:transparent!important}
+#hc-wheel #second-popup .popup-btn *{pointer-events:none!important}
+</style>
+<script>
+(function bindFinalOfferButton(){var claim=document.querySelector('#hc-wheel #d25c38c9-c12e-670a-4afb-5b9f8d6045ee');if(!claim||claim.dataset.offerBound==='1')return;claim.dataset.offerBound='1';function openOffer(event){event.preventDefault();event.stopPropagation();event.stopImmediatePropagation();try{sendConversions()}catch(ignore){}window.location.assign(CONFIG.offerURI)}claim.addEventListener('click',openOffer,true);claim.addEventListener('touchend',openOffer,{capture:true,passive:false});})();
+</script>
+<style>
 html,body{margin:0!important;padding:0!important;overflow-x:hidden!important}
 .page.container-fluid,.page-content{padding-left:0!important;padding-right:0!important}
 .kartra_page_section,.kartra_page_section>.container,.kartra_page_section .row,.kartra_page_section [class*="col-"]{max-width:none!important;overflow:visible!important}
