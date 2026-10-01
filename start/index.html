@@ -1354,5 +1354,6 @@ body.mg-modal-lock{overflow:hidden}
   root.querySelectorAll('[data-modal]').forEach(function(btn){btn.addEventListener('click',function(){const modal=root.querySelector('#modal-'+btn.dataset.modal);if(!modal)return;lastTrigger=btn;modal.classList.add('is-open');document.body.classList.add('mg-modal-lock');modal.querySelector('.modal-close').focus()})});
   root.querySelectorAll('.legal-modal').forEach(function(modal){modal.querySelector('.modal-close').addEventListener('click',function(){closeModal(modal)});modal.addEventListener('click',function(e){if(e.target===modal)closeModal(modal)})});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){const open=root.querySelector('.legal-modal.is-open');if(open)closeModal(open)}});
+  root.querySelectorAll('.modal-copy').forEach(function(copy){copy.innerHTML=copy.innerHTML.replaceAll('privacy@mrgreen.kartra.com','privacy@mr-green.kartra.com')});
 })();
 </script>
